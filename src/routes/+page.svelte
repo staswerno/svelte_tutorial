@@ -4,6 +4,22 @@
 </script>
 
 <h1>{name.toLowerCase()} themed svelte tutorial</h1>
+
+<!-- attributes can be dynamic -->
+<!-- svelte will give a11y warning in case of no alt -->
 <img src={src} alt="{name.toLowerCase()} artwork 1">
-<!-- if the src variable is src, this can be written as: -->
+
+<!-- if the src variable is src, this can be written in shorthand: -->
 <img {src} alt="{name.toLowerCase()} artwork 2">
+
+<!-- styling is scoped to the component -->
+<style>
+    h1 {
+        color: midnightblue;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+</style>
