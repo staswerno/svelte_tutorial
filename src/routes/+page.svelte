@@ -1,7 +1,8 @@
 <script>
+    import Nested from "./Nested.svelte";
     let name = 'THREE BODY PROBLEM';
     let src = 'https://media.gq-magazine.co.uk/photos/63bee87a57e25ad39c962d73/16:9/w_1280,c_limit/The-three-body-problem-hp.jpg';
-    import Nested from "./Nested.svelte";
+    let string = 'this string contains <strong>html</strong> tags';
 </script>
 
 <h1>{name.toLowerCase()} themed svelte tutorial</h1>
@@ -17,6 +18,8 @@
 
 <!-- always capitalise component names to distinguish from html elements -->
 <Nested />
+
+<p>{@html string}</p>
 
 <!-- styling is scoped to the component -->
 <style>
