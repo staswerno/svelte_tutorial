@@ -3,6 +3,7 @@
     let name = 'THREE BODY PROBLEM';
     let src = 'https://media.gq-magazine.co.uk/photos/63bee87a57e25ad39c962d73/16:9/w_1280,c_limit/The-three-body-problem-hp.jpg';
     let string = 'this string contains <strong>html</strong> tags';
+    let htmlTestInput = '<input type="text" value="this is a test">'
 </script>
 
 <h1>{name.toLowerCase()} themed svelte tutorial</h1>
@@ -20,6 +21,7 @@
 <Nested />
 
 <p>{@html string}</p>
+{@html htmlTestInput}
 
 <!-- styling is scoped to the component -->
 <style>
