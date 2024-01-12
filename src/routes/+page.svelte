@@ -8,6 +8,8 @@
 
 <h1>{name.toLowerCase()} themed svelte tutorial</h1>
 
+<a href="/reactivity">reactivity</a>
+
 <!-- attributes can be dynamic -->
 <!-- svelte will give a11y warning in case of no alt -->
 <img src={src} alt="{name.toLowerCase()} artwork 1">
@@ -34,7 +36,11 @@
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     img {
-        width: 100%;
-        height: auto;
+        height: 400px;
+        display: block;
+    }
+    a {
+        padding: 20px 20px 20px 0px;
+        display: inline-block;
     }
 </style>
