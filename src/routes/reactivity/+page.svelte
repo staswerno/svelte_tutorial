@@ -5,6 +5,8 @@
 		count += 1;
 	} 
 
+    // there is nothing calling this like a function
+    // so the $ tells it it should "react" when a value changes
     $: doubled = count * 2;
 
     $: {
@@ -15,6 +17,31 @@
     $: if (count >= 10) {
         console.log(`kitten death count is dangerously high you monster!`);
     }
+
+    let numbers = [1, 2, 3];
+
+    function addNumber() {
+        // svelte's reactivity is triggered by assignment
+        // so this alone won't trigger a re-render
+        numbers.push(numbers.length + 1);
+
+        // you can get around it by using a redundant assignment:
+        numbers = numbers;
+
+        // or, using the spread operator:
+        // numbers = [...numbers, numbers.length + 1];
+
+        // also works for pop, shift, unshift, splice, etc.
+        // Assignments to properties of arrays and objects
+        // e.g. obj.foo += 1 or array[i] = x
+        // work the same way as assignments to the values themselves.
+
+        // RULE: updated variable name must appear on the left
+        // of the assignment operator
+        
+    }
+
+    $: sum = numbers.reduce((total, currentNumber) => total + currentNumber, 0);
 </script>
 
 <button on:click={increment}>
@@ -23,3 +50,9 @@
 </button>
 
 <p>{count} doubled is {doubled}</p>
+
+<p>{numbers.join(' + ')} = {sum}</p>
+
+<button on:click={addNumber}>
+    add a number
+</button>
