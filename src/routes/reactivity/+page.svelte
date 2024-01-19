@@ -41,7 +41,13 @@
         // will always be one more than the index of the last element
      
         // RULE: updated variable name must appear on the left
-        // of the assignment operator
+        // of the assignment operator. the following won't work,
+        // because your are accessing properties of obj, but not
+        // obj itself:
+
+        const obj = { foo: { bar: 1 } };
+        const foo = obj.foo;
+        foo.bar = 2;
 
     }
 
