@@ -6,8 +6,9 @@
 <h1 style="color: {selected}">Pick a colour</h1>
 
 <div>
-    <!-- rather than write a button for each color... -->
-    <!-- get current index as second argument -->
+    <!-- rather than write a button for each color -->
+	<!-- use an each block, like map in react. -->
+    <!-- you can get current index as second argument -->
     {#each colors as color, i}
         <button
             aria-current={selected === color}
