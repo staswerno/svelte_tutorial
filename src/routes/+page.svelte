@@ -27,11 +27,7 @@
 
 <!-- styling is scoped to the component -->
 <style>
-    h1 {
-        color: midnightblue;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-    p {
+    h1, p {
         color: midnightblue;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
