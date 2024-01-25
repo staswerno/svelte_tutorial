@@ -11,10 +11,10 @@
 <a href="/reactivity">reactivity</a>
 
 <!-- attributes can be dynamic -->
-<!-- svelte will give a11y warning in case of no alt -->
+<!-- svelte will give a11y warning in case of missing alt -->
 <img src={src} alt="{name.toLowerCase()} artwork 1">
 
-<!-- if the src variable name is src, this can be written in shorthand: -->
+<!-- if the src variable name is also src, this can be written in shorthand: -->
 <img {src} alt="{name.toLowerCase()} artwork 2">
 
 <p>this content is from this component</p>
