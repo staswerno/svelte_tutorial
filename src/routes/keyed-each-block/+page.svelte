@@ -9,6 +9,9 @@
 		{ id: 5, name: 'egg' }
 	];
 
+	// creates a new array containg items from 
+	// and including index 1 of the initial array
+	// thus "removing" the item at index 0
 	function handleClick() {
 		things = things.slice(1);
 	}
@@ -18,6 +21,9 @@
 	Remove first thing
 </button>
 
-{#each things as thing}
+<!-- thing.id is the key, which tells svelte 
+ how to figure out what to update when the
+ values (name) change -->
+{#each things as thing (thing.id)}
 	<Thing name={thing.name} />
 {/each}
