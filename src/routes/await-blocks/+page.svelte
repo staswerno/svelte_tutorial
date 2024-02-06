@@ -6,7 +6,6 @@
 	function handleClick() {
 		promise = getRandomNumber();
 	}
-	// test github connection
 </script>
 
 <button on:click={handleClick}>
