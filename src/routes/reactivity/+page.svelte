@@ -29,7 +29,7 @@
         // numbers = numbers;
 
         // or, using the spread operator:
-        // numbers = [...numbers, numbers.length + 1];
+        numbers = [...numbers, numbers.length + 1];
 
         // also works for pop, shift, unshift, splice, etc.
 
@@ -45,9 +45,9 @@
         // because your are accessing properties of obj, but not
         // obj itself:
 
-        const obj = { foo: { bar: 1 } };
-        const foo = obj.foo;
-        foo.bar = 2;
+        // const obj = { foo: { bar: 1 } };
+        // const foo = obj.foo;
+        // foo.bar = 2;
 
     }
 
