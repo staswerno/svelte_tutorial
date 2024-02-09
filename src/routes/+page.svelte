@@ -9,6 +9,11 @@
 <h1>{name.toLowerCase()} tutorial</h1>
 
 <a href="/reactivity">reactivity</a>
+<a href="/props">props</a>
+<a href="/conditionals">conditionals</a>
+<a href="/each-blocks">each blocks</a>
+<a href="/keyed-each-blocks">keyed each blocks</a>
+<a href="/await-blocks">await blocks</a>
 
 <!-- attributes can be dynamic -->
 <!-- svelte will give a11y warning in case of missing alt -->
