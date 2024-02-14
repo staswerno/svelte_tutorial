@@ -32,7 +32,7 @@
 
 <!-- styling is scoped to the component -->
 <style>
-    h1, p {
+    h1, p, a {
         color: midnightblue;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
