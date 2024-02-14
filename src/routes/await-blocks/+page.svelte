@@ -1,5 +1,6 @@
 <script>
-	import { getRandomNumber } from './utils.js';
+	import { error } from '@sveltejs/kit';
+import { getRandomNumber } from './utils.js';
 
 	let promise = getRandomNumber();
 
@@ -12,4 +13,10 @@
 	generate random number
 </button>
 
-<p>...waiting</p>
+{#await promise}
+	<p>...waiting</p>
+{:then number}
+	<p>the number is {number}</p>
+{:catch error}
+	<p style="color: red">{error.message}</p>
+{/await}
