@@ -22,7 +22,25 @@ import { getRandomNumber } from './utils.js';
 {/await}
 
 <!--
-	try adding an API endpoint when the time comes
+	Only the most recent promise is considered,
+meaning you don't need to worry about race conditions.
+-->
+
+<!--
+	If you know that your promise can't reject,
+you can omit the catch block.
+You can also omit the first block if you don't
+want to show anything until the promise resolves:
+-->
+
+<!--
+{#await promise then number}
+	<p>The number is {number}</p>
+{/await}
+-->
+
+<!--
+try adding an API endpoint when the time comes
 to test this properly
 use the following code as a baseline:
 
