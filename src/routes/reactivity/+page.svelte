@@ -9,6 +9,8 @@
     // so the $ tells it it should "react" when a value changes
     $: doubled = count * 2;
 
+    // you can group reactive statements together
+    // in a block
     $: {
         console.log(`count is ${count}`);
         console.log(`doubled is ${doubled}`);
