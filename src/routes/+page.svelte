@@ -19,6 +19,7 @@
         <a href="/events">events</a>
         <a href="/component-events">component events</a>
         <a href="/event-forwarding">event forwarding</a>
+        <a href="/dom-event-forwarding">dom event forwarding</a>
 
         <!-- attributes can be dynamic -->
         <!-- svelte will give a11y warning in case of missing alt -->
