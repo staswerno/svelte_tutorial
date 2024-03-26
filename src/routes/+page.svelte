@@ -14,13 +14,15 @@
 <a href="/each-blocks">each blocks</a>
 <a href="/keyed-each-blocks">keyed each blocks</a>
 <a href="/await-blocks">await blocks</a>
+<a href="/events">events</a>
+<a href="/event-components">event components</a>
 
 <!-- attributes can be dynamic -->
 <!-- svelte will give a11y warning in case of missing alt -->
 <img src={src} alt="{name.toLowerCase()} artwork 1">
 
 <!-- if the src variable name is also src, this can be written in shorthand: -->
-<img {src} alt="{name.toLowerCase()} artwork 2">
+<!-- <img {src} alt="{name.toLowerCase()} artwork 2"> -->
 
 <p>this content is from this component</p>
 
