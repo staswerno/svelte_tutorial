@@ -1,6 +1,6 @@
 <script>
 	import BigRedButton from './BigRedButton.svelte';
-	import horn from './horn.mp3';
+	import horn from './horn.wav';
 
 	const audio = new Audio();
 	audio.src = horn;
