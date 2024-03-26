@@ -56,15 +56,17 @@
     $: sum = numbers.reduce((total, currentNumber) => total + currentNumber, 0);
 </script>
 
-<button on:click={increment}>
-	# kittens killed at your behest: {count}
-	{count === 1 ? 'kitten' : 'kittens'}
-</button>
+<div>
+    <button on:click={increment}>
+        # kittens killed at your behest: {count}
+        {count === 1 ? 'kitten' : 'kittens'}
+    </button>
 
-<p>{count} doubled is {doubled}</p>
+    <p>{count} doubled is {doubled}</p>
 
-<p>{numbers.join(' + ')} = {sum}</p>
+    <p>{numbers.join(' + ')} = {sum}</p>
 
-<button on:click={addNumber}>
-    add a number
-</button>
+    <button on:click={addNumber}>
+        add a number
+    </button>
+</div>

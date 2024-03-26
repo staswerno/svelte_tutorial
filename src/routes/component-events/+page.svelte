@@ -6,8 +6,9 @@
 	}
 </script>
 
-<Inner on:message={handleMessage} />
-
+<div>
+	<Inner on:message={handleMessage} />
+</div>
 <!-- You can also try changing the event name 
 to something else. For instance, 
 change dispatch('message', {...}) to 

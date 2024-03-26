@@ -9,17 +9,19 @@ import { getRandomNumber } from './utils.js';
 	}
 </script>
 
-<button on:click={handleClick}>
-	generate random number
-</button>
+<div>
+	<button on:click={handleClick}>
+		generate random number
+	</button>
 
-{#await promise}
-	<p>...waiting</p>
-{:then number}
-	<p>the number is {number[0]}</p>
-{:catch error}
-	<p style="color: red">{error.message}</p>
-{/await}
+	{#await promise}
+		<p>...waiting</p>
+	{:then number}
+		<p>the number is {number[0]}</p>
+	{:catch error}
+		<p style="color: red">{error.message}</p>
+	{/await}
+</div>
 
 <!--
 	Only the most recent promise is considered,

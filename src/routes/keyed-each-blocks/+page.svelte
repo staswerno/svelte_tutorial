@@ -17,13 +17,15 @@
 	}
 </script>
 
-<button on:click={handleClick}>
-	Remove first thing
-</button>
+<div>
+	<button on:click={handleClick}>
+		Remove first thing
+	</button>
 
-<!-- thing.id is the key, which tells svelte 
- how to figure out what to update when the
- values (name) change -->
-{#each things as thing (thing.id)}
-	<Thing name={thing.name} />
-{/each}
+	<!-- thing.id is the key, which tells svelte 
+	how to figure out what to update when the
+	values (name) change -->
+	{#each things as thing (thing.id)}
+		<Thing name={thing.name} />
+	{/each}
+</div>

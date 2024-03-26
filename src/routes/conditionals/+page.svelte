@@ -6,19 +6,20 @@
 	}
 </script>
 
-<button on:click={increment}>
-	Clicked {count}
-	{count === 1 ? 'time' : 'times'}
-</button>
+<div>
+	<button on:click={increment}>
+		Clicked {count}
+		{count === 1 ? 'time' : 'times'}
+	</button>
 
-{#if count > 10}
-    <p>{count} is greater than 10</p>
-{:else if count < 6}
-	<p>{count} is between 0 and 5</p>
-{:else}
-	<p>{count} is between 6 and 10</p>
-{/if}
-
+	{#if count > 10}
+		<p>{count} is greater than 10</p>
+	{:else if count < 6}
+		<p>{count} is between 0 and 5</p>
+	{:else}
+		<p>{count} is between 6 and 10</p>
+	{/if}
+</div>
 <!--
 	A # character always indicates a block opening tag. 
 	A / character always indicates a block closing tag. 

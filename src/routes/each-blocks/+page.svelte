@@ -3,23 +3,25 @@
 	let selected = colors[0];
 </script>
 
-<h1 style="color: {selected}">Pick a colour</h1>
-
 <div>
-    <!-- rather than write a button for each color -->
-	<!-- use an each block, like map in react. -->
-    <!-- you can get current index as second argument -->
-    {#each colors as color, i}
-        <button
-            aria-current={selected === color}
-            aria-label="{color}"
-            style="background: {color}"
-            on:click={() => selected = color}
-        >index = {i}</button>
-    {/each}
-    <!-- The expression (colors, in this case) can be any array
-         or array-like object (i.e. it has a length property). 
-         You can loop over generic iterables with each [...iterable].-->
+	<h1 style="color: {selected}">Pick a colour</h1>
+
+	<div class="picker">
+		<!-- rather than write a button for each color -->
+		<!-- use an each block, like map in react. -->
+		<!-- you can get current index as second argument -->
+		{#each colors as color, i}
+			<button
+				aria-current={selected === color}
+				aria-label="{color}"
+				style="background: {color}"
+				on:click={() => selected = color}
+			>index = {i}</button>
+		{/each}
+		<!-- The expression (colors, in this case) can be any array
+			or array-like object (i.e. it has a length property). 
+			You can loop over generic iterables with each [...iterable].-->
+	</div>
 </div>
 
 <style>
@@ -31,7 +33,7 @@
 		transition: color 0.2s;
 	}
 
-	div {
+	.picker {
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
 		grid-gap: 5px;
