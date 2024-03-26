@@ -15,7 +15,7 @@
 <a href="/keyed-each-blocks">keyed each blocks</a>
 <a href="/await-blocks">await blocks</a>
 <a href="/events">events</a>
-<a href="/event-components">event components</a>
+<a href="/component-events">component-events</a>
 
 <!-- attributes can be dynamic -->
 <!-- svelte will give a11y warning in case of missing alt -->
